@@ -7,19 +7,33 @@ Dark green: #28b485
 
 */
 /* *=univer selector*/
-* {
+*,
+*::after
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
+
+html {
+    /* prin covertire px in rem si covertire px in % 
+    da posibilitea de mari fontul fara a fi nevoie sa schimban 
+    de fiecaredata px ei vor mosteni cea ce a fost stabilit global 
+    1rem =10px 
+    100% = 16px */
+     font-size: 62.5%; 
+}
+
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 /* imaginea din header */
@@ -43,12 +57,12 @@ body {
 /* pozitionarea logolul */
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 
@@ -75,14 +89,14 @@ body {
     /* fix animatie shaking */
     backface-visibility: hidden;
     /* o margine intre buton si h1 */
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 /* formatarea textului din primul span din interiorul lui h1  */
 .heading-pimary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     
 
     /* animatie text */
@@ -97,9 +111,9 @@ body {
 /* formatarea textului din al doilea span din interiorul lui h1 */
 .heading-pimary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
 
     /* animatie text */
     animation: moveInRight 5s ease-out;
@@ -110,11 +124,11 @@ body {
     /* din stanga origini */
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     /* efect in dreapta origini */
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
 
     /* pozitia finala/originea */
@@ -128,11 +142,11 @@ body {
     /* din dreapta origini */
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     /* efect in stanga origini */
     80% {
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
 
     /* pozitia finala/originea */
@@ -146,7 +160,7 @@ body {
     /* de josul origini */
     0% {
         opacity: 0;
-        transform: translateY(30px) ;
+        transform: translateY(3rem) ;
     }
     
 
@@ -162,11 +176,12 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
+    font-size: 1.6rem;
 
     /* rotunjeste marginile butonului */
-    border-radius: 100px;
+    border-radius: 10rem;
     /* animatie buton */
     transition: all .2s;
     position: relative;
@@ -176,14 +191,14 @@ body {
 .btn:hover {
     transform: translateY(-3px);
     /* shadow buton directia, shadow, blur, culoare si opacity*/
-    box-shadow: 0 10px 20px rgba(0,0, 0, .2);
+    box-shadow: 0 1rem 2rem rgba(0,0, 0, .2);
 }
 
 /* cand apas pe buton va cobora */
 .btn:active {
     transform: translateY(-1px);
     /* shadow buton directia, shadow, blur, culoare si opacity*/
-    box-shadow: 0 5px 10px rgba(0,0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0,0, 0, .2);
 }
 
 .btn-white {
@@ -197,7 +212,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
