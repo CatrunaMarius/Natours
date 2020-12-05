@@ -1,235 +1,179 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 /* *=univer selector*/
 *,
 *::after
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
 html {
-    /* prin covertire px in rem si covertire px in % 
+  /* prin covertire px in rem si covertire px in % 
     da posibilitea de mari fontul fara a fi nevoie sa schimban 
     de fiecaredata px ei vor mosteni cea ce a fost stabilit global 
     1rem =10px 
     100% = 16px */
-     font-size: 62.5%; 
-}
-
+  font-size: 62.5%; }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem;
-
-    box-sizing: border-box;
-}
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
 /* imaginea din header */
 .header {
-    height: 95vh;
-    background-image: linear-gradient( 
-        to right bottom,
-        rgba(126, 213, 111, 0.801),
-        rgba(40, 180, 131, 0.801)),
-      url('../img/hero.jpg');
-    background-size: cover;
-    background-position: top;
-    position: relative;
-
-    /* pentru a crea acel header dreptunchi
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /* pentru a crea acel header dreptunchi
     polygon(stanga sus, dreapta sus, dreapta jos, stanga jos)
     */
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 /* pozitionarea logolul */
 .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
 
 .header__logo {
-    height: 3.5rem;
-}
-
+  height: 3.5rem; }
 
 /* creaza o cutia pentru text si buton */
 .header__text-box {
-    position: absolute;
-    /* gaseste cordonatele 
+  position: absolute;
+  /* gaseste cordonatele 
     date de top si left */
-    top: 40%;
-    left: 50%;
-    /* pozitionarea textului */
-    transform: translate(-50%, -50%);
-
-    /* aliniare buton in centru */
-    text-align: center;
-}
+  top: 40%;
+  left: 50%;
+  /* pozitionarea textului */
+  transform: translate(-50%, -50%);
+  /* aliniare buton in centru */
+  text-align: center; }
 
 /* schimbarea culori si formatarea  textului din h1 */
-.heading-primary{
-    color: #fff;
-    text-transform: uppercase;
-    
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* fix animatie shaking */
+  backface-visibility: hidden;
+  /* o margine intre buton si h1 */
+  margin-bottom: 6rem; }
 
-    /* fix animatie shaking */
-    backface-visibility: hidden;
-    /* o margine intre buton si h1 */
-    margin-bottom: 6rem;
-}
 /* formatarea textului din primul span din interiorul lui h1  */
 .heading-pimary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  /* animatie text */
+  animation-name: moveInLeft;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  /* animation-iteration-count: 3;
+    animation-duration: 1s; */ }
 
-    /* animatie text */
-    animation-name: moveInLeft;
-    animation-duration: 5s;
-    animation-timing-function: ease-out;
-
-    /* animation-iteration-count: 3;
-    animation-duration: 1s; */
-
-}
 /* formatarea textului din al doilea span din interiorul lui h1 */
 .heading-pimary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-
-    /* animatie text */
-    animation: moveInRight 5s ease-out;
-}
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  /* animatie text */
+  animation: moveInRight 5s ease-out; }
 
 /* animatie */
 @keyframes moveInLeft {
-    /* din stanga origini */
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    /* efect in dreapta origini */
-    80% {
-        transform: translateX(2rem);
-    }
-
-    /* pozitia finala/originea */
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  /* din stanga origini */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  /* efect in dreapta origini */
+  80% {
+    transform: translateX(2rem); }
+  /* pozitia finala/originea */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInRight {
-    /* din dreapta origini */
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    /* efect in stanga origini */
-    80% {
-        transform: translateX(-2rem);
-    }
-
-    /* pozitia finala/originea */
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  /* din dreapta origini */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  /* efect in stanga origini */
+  80% {
+    transform: translateX(-2rem); }
+  /* pozitia finala/originea */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInBotton {
-    /* de josul origini */
-    0% {
-        opacity: 0;
-        transform: translateY(3rem) ;
-    }
-    
-
-    /* pozitia finala/originea */
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  /* de josul origini */
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  /* pozitia finala/originea */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* butonul style*/
-.btn:link, 
+.btn:link,
 .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    font-size: 1.6rem;
-
-    /* rotunjeste marginile butonului */
-    border-radius: 10rem;
-    /* animatie buton */
-    transition: all .2s;
-    position: relative;
-}
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  /* rotunjeste marginile butonului */
+  border-radius: 10rem;
+  /* animatie buton */
+  transition: all .2s;
+  position: relative; }
 
 /* cand trec cu mous-ul se ridica */
 .btn:hover {
-    transform: translateY(-3px);
-    /* shadow buton directia, shadow, blur, culoare si opacity*/
-    box-shadow: 0 1rem 2rem rgba(0,0, 0, .2);
-}
+  transform: translateY(-3px);
+  /* shadow buton directia, shadow, blur, culoare si opacity*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 /* cand apas pe buton va cobora */
 .btn:active {
-    transform: translateY(-1px);
-    /* shadow buton directia, shadow, blur, culoare si opacity*/
-    box-shadow: 0 .5rem 1rem rgba(0,0, 0, .2);
-}
+  transform: translateY(-1px);
+  /* shadow buton directia, shadow, blur, culoare si opacity*/
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-    background-color: #fff;
-    color: #777;
-}
+  background-color: #fff;
+  color: #777; }
 
 /* efecet buton */
-.btn::after{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
 
 .btn--white::after {
-    background-color: #fff;
-}
+  background-color: #fff; }
 
 .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
 
 .btn--animated {
-    animation: moveInBotton .5s ease-out .75s;
-    animation-fill-mode: backwards;
-}
+  animation: moveInBotton .5s ease-out .75s;
+  animation-fill-mode: backwards; }
