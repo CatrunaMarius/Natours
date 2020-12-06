@@ -1,0 +1,52 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-gray-dark;
+    padding: 3rem;
+
+}
+
+// schimbarea culori si formatarea  textului din h1 
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    
+
+    // fix animatie shaking 
+    backface-visibility: hidden;
+    // o margine intre buton si h1 
+    margin-bottom: 6rem;
+
+    // neste
+    // formatarea textului din primul span din interiorul lui h1  */
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        
+
+        // ========= animatie text =========== 
+        animation-name: moveInLeft;
+        animation-duration: 5s;
+        animation-timing-function: ease-out;
+
+        // animation-iteration-count: 3;
+        // animation-duration: 1s; 
+        // ===================================
+    }
+
+    // formatarea textului din al doilea span din interiorul lui h1 */
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+
+        // animatie text 
+        animation: moveInRight 5s ease-out;
+    }
+
+}

@@ -1,0 +1,25 @@
+/* *=univer selector*/
+
+*,
+*::after
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* prin covertire px in rem si covertire px in % 
+    da posibilitea de mari fontul fara a fi nevoie sa schimban 
+    de fiecaredata px ei vor mosteni cea ce a fost stabilit global 
+    1rem =10px 
+    100% = 16px */
+    //aceasta defineste cat este 1rem
+    font-size: 62.5%; 
+}
+
+
+body {
+
+    box-sizing: border-box;
+}

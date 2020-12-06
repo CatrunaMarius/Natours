@@ -1,0 +1,44 @@
+// imaginea din header 
+.header {
+    height: 95vh;
+    background-image: linear-gradient( 
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.801)),
+      url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    /* pentru a crea acel header dreptunchi
+    polygon(stanga sus, dreapta sus, dreapta jos, stanga jos)
+    */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    // ==== pozitionarea logolul, neste =====
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+    
+    
+    // creaza o cutia pentru text si buton 
+    &__text-box {
+        position: absolute;
+        //gaseste cordonatele 
+        //date de top si left 
+        top: 40%;
+        left: 50%;
+        // pozitionarea textului
+        transform: translate(-50%, -50%);
+    
+        // aliniare buton in centru 
+        text-align: center;
+    }
+    // =========================================
+}

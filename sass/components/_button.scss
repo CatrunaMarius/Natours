@@ -1,0 +1,72 @@
+
+.btn {
+    // neste
+    // butonul style
+    &:link, 
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        font-size: 1.6rem;
+
+        // rotunjeste marginile butonului 
+        border-radius: 10rem;
+        // animatie buton 
+        transition: all .2s;
+        position: relative;
+
+    }
+
+    // cand trec cu mous-ul se ridica 
+    &:hover {
+        transform: translateY(-3px);
+        // shadow buton directia, shadow, blur, culoare si opacity
+        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+
+        // ====== efecet buton scale neste  ======
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    // cand apas pe buton va cobora 
+    &:active {
+        transform: translateY(-1px);
+        // shadow buton directia, shadow, blur, culoare si opacity
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-dark;
+
+        // ====== efecet buton scale, neste  ======
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    // ====== efecet buton  ====== 
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    // up from botton
+    &--animated {
+        animation: moveInBotton .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+    // =============================================
+} 

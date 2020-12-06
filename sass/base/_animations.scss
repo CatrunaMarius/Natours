@@ -1,0 +1,53 @@
+
+// animatie 
+@keyframes moveInLeft {
+    // din stanga origini 
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    // efect in dreapta origini 
+    80% {
+        transform: translateX(2rem);
+    }
+
+    // pozitia finala/originea 
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    // din dreapta origini 
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    // efect in stanga origini 
+    80% {
+        transform: translateX(-2rem);
+    }
+
+    // pozitia finala/originea 
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBotton {
+    // de josul origini 
+    0% {
+        opacity: 0;
+        transform: translateY(3rem) ;
+    }
+    
+
+    // pozitia finala/originea 
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+// ====================================
