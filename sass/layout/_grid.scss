@@ -3,7 +3,7 @@
     //daca are destul width atunci va folosi width specificat
     //daca nu are destul width foloseste 100% din spatiul disponibil
     max-width: $grid-width;
-    background-color: #eee;
+    
     margin: 0 auto; //centru block element in interiorul unui alt block element 
     
 
@@ -15,7 +15,7 @@
     @include clearfix;
     // atribut selector
     [class^="col-"] {
-        background-color: orangered;
+        
         float: left;
 
         &:not(:last-child){
