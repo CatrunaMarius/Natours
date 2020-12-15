@@ -38,6 +38,7 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
 
+    // butonul alb
     &--white {
         background-color: $color-white;
         color: $color-gray-dark;
@@ -45,6 +46,17 @@
         // ====== efecet buton scale, neste  ======
         &::after {
             background-color: $color-white;
+        }
+    }
+
+    // butonul verde
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        // ====== efecet buton scale, neste  ======
+        &::after {
+            background-color: $color-primary;
         }
     }
 
