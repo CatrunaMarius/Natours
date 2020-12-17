@@ -2,6 +2,7 @@
 .btn {
     // neste
     // butonul style
+    &,
     &:link, 
     &:visited {
         text-transform: uppercase;
@@ -16,6 +17,9 @@
         transition: all .2s;
         position: relative;
 
+        //modifica pentru elementul <button>
+        border: none;
+        cursor: pointer;
     }
 
     // cand trec cu mous-ul se ridica 
@@ -32,7 +36,9 @@
     }
 
     // cand apas pe buton va cobora 
-    &:active {
+    &:active
+    &:focus {
+        outline: none;//ascunde acel border focus
         transform: translateY(-1px);
         // shadow buton directia, shadow, blur, culoare si opacity
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
