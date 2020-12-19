@@ -581,7 +581,8 @@ body {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s; }
+  transition: all .3s;
+  backdrop-filter: blur(10px); }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -778,7 +779,7 @@ body {
     polygon(stanga sus, dreapta sus, dreapta jos, stanga jos)
     */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.801), rgba(255, 119, 48, 0.801)), url("../img/hero.jpg"); } }
   @media (max-width: 37.5em) {
