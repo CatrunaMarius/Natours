@@ -3,16 +3,27 @@
     //daca are destul width atunci va folosi width specificat
     //daca nu are destul width foloseste 100% din spatiul disponibil
     max-width: $grid-width;
-    
+    // respond to diverse divice
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
     margin: 0 auto; //centru block element in interiorul unui alt block element 
     
 
     &:not(:last-child){
         margin-bottom: $gutter-vertical;//lasa magini intre randuri dar nu si pentru ultimul rand
+        // respond to diverse divice
+        @include respond(tab-port) {
+            margin-bottom:  $gutter-vertical-small;
+        }
     }
     // ==============================================
 
     @include clearfix;
+
+
     // atribut selector
     [class^="col-"] {
         
@@ -20,6 +31,17 @@
 
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+
+            // respond to diverse divice
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-horizontal;
+            }
+        }
+
+        // respond to diverse divice
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
 

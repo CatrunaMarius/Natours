@@ -4,7 +4,7 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: $color-gray-dark;
-    padding: 3rem;
+    
 
 }
 
@@ -18,6 +18,9 @@ body {
     backface-visibility: hidden;
     // o margine intre buton si h1 
     margin-bottom: 6rem;
+
+
+    
 
     // neste
     // formatarea textului din primul span din interiorul lui h1  */
@@ -36,6 +39,12 @@ body {
         // animation-iteration-count: 3;
         // animation-duration: 1s; 
         // ===================================
+
+        // respond to diverse divice
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
     }
 
     // formatarea textului din al doilea span din interiorul lui h1 */
@@ -47,6 +56,12 @@ body {
 
         // animatie text 
         animation: moveInRight 5s ease-out;
+
+        // respond to diverse divice
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            
+        }
     }
 
 }
@@ -65,6 +80,18 @@ body {
     //====================================
     letter-spacing: .2rem; 
     transition: all .2s;
+
+     // respond to diverse divice
+     @include respond(tab-port) {
+        font-size: 3rem;
+        
+    }
+    
+     @include respond(phone) {
+        font-size: 2.5rem;
+        
+    }
+    // ============================
 
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);

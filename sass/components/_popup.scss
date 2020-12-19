@@ -32,13 +32,27 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        // respond to diverse divice
+        @include respond(phone) {
+            width: 50%;
+            display: inline-flex;
+        }
+        
     }
 
     &__right {
         width: 66.666667%;
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: middle;        
         padding: 3rem 5rem;
+
+        // respond to diverse divice
+        @include respond(phone) {
+            width: 100%;
+            display: block;
+            
+        }
     }
 
     &__img {

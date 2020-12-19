@@ -15,6 +15,12 @@
     */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    // respond to diverse divice
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+
     // ==== pozitionarea logolul, neste =====
     &__logo-box {
         position: absolute;
