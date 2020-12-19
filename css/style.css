@@ -73,6 +73,19 @@ body {
   background-color: #55c57a;
   color: #fff; }
 
+/*width*/
+body::-webkit-scrollbar {
+  width: 8px; }
+
+/*track*/
+body::-webkit-scrollbar-track {
+  background: #fff; }
+
+/*thumb*/
+body::-webkit-scrollbar-thumb {
+  background: #55c57a;
+  border-radius: 30px; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -903,7 +916,7 @@ body {
   margin-top: -20vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding-top: 30rem; } }
 
 .section-features {
   padding: 20rem 0;
