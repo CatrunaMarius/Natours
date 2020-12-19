@@ -41,3 +41,9 @@ body {
         padding: 0;
     }
 }
+
+// cand selectezi text va folosi culorile stabilite de noi
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
